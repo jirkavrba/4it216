@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1f4qecc" targetNamespace="http://bpmn.io/schema/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="8.7.2">
+  <bpmn:collaboration id="Collaboration_0dddt5y">
+    <bpmn:participant id="Participant_0wdjkaj" name="Pracovník - florista" processRef="Process_19cc4mc" />
+    <bpmn:textAnnotation id="TextAnnotation_1ybj4z4">
+      <bpmn:text>Zde proběhne zařazení do skladové evidence</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1lyawmu" sourceRef="Activity_1d4tb2t" targetRef="TextAnnotation_1ybj4z4" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_19cc4mc" isExecutable="false">
+    <bpmn:startEvent id="Event_0gxy40t" name="Květiny jsou připravené k naskladnění">
+      <bpmn:outgoing>Flow_1hg220b</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="Activity_0dkwjrh" name="Klasifikace květin podle systému">
+      <bpmn:incoming>Flow_1hg220b</bpmn:incoming>
+      <bpmn:outgoing>Flow_1gjpjgw</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_1qysjqk" name="Přiřazení štítků s čárovým kódem">
+      <bpmn:incoming>Flow_1gjpjgw</bpmn:incoming>
+      <bpmn:outgoing>Flow_0ba4ffq</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_1auh3jx" name="Rozdělení květin do jednotlivých částí skladu">
+      <bpmn:incoming>Flow_0ba4ffq</bpmn:incoming>
+      <bpmn:outgoing>Flow_1n4cdt4</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_1d4tb2t" name="Naskenování čárových kódů při uskladnění květin">
+      <bpmn:incoming>Flow_1n4cdt4</bpmn:incoming>
+      <bpmn:outgoing>Flow_0t6rdpi</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="Event_0zd7o38" name="Zboží naskladněno">
+      <bpmn:incoming>Flow_0t6rdpi</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1hg220b" sourceRef="Event_0gxy40t" targetRef="Activity_0dkwjrh" />
+    <bpmn:sequenceFlow id="Flow_1gjpjgw" sourceRef="Activity_0dkwjrh" targetRef="Activity_1qysjqk" />
+    <bpmn:sequenceFlow id="Flow_0ba4ffq" sourceRef="Activity_1qysjqk" targetRef="Activity_1auh3jx" />
+    <bpmn:sequenceFlow id="Flow_1n4cdt4" sourceRef="Activity_1auh3jx" targetRef="Activity_1d4tb2t" />
+    <bpmn:sequenceFlow id="Flow_0t6rdpi" sourceRef="Activity_1d4tb2t" targetRef="Event_0zd7o38" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_0dddt5y">
+      <bpmndi:BPMNShape id="Participant_0wdjkaj_di" bpmnElement="Participant_0wdjkaj" isHorizontal="true">
+        <dc:Bounds x="156" y="130" width="864" height="250" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1hg220b_di" bpmnElement="Flow_1hg220b">
+        <di:waypoint x="248" y="250" />
+        <di:waypoint x="300" y="250" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1gjpjgw_di" bpmnElement="Flow_1gjpjgw">
+        <di:waypoint x="400" y="250" />
+        <di:waypoint x="460" y="250" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ba4ffq_di" bpmnElement="Flow_0ba4ffq">
+        <di:waypoint x="560" y="250" />
+        <di:waypoint x="620" y="250" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1n4cdt4_di" bpmnElement="Flow_1n4cdt4">
+        <di:waypoint x="720" y="250" />
+        <di:waypoint x="780" y="250" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0t6rdpi_di" bpmnElement="Flow_0t6rdpi">
+        <di:waypoint x="880" y="250" />
+        <di:waypoint x="942" y="250" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_0gxy40t_di" bpmnElement="Event_0gxy40t">
+        <dc:Bounds x="212" y="232" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="199" y="275" width="62" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0dkwjrh_di" bpmnElement="Activity_0dkwjrh">
+        <dc:Bounds x="300" y="210" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1qysjqk_di" bpmnElement="Activity_1qysjqk">
+        <dc:Bounds x="460" y="210" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1auh3jx_di" bpmnElement="Activity_1auh3jx">
+        <dc:Bounds x="620" y="210" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1d4tb2t_di" bpmnElement="Activity_1d4tb2t">
+        <dc:Bounds x="780" y="210" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0zd7o38_di" bpmnElement="Event_0zd7o38">
+        <dc:Bounds x="942" y="232" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="929" y="275" width="63" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_1ybj4z4_di" bpmnElement="TextAnnotation_1ybj4z4">
+        <dc:Bounds x="780" y="80" width="190" height="37" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Association_1lyawmu_di" bpmnElement="Association_1lyawmu">
+        <di:waypoint x="830" y="210" />
+        <di:waypoint x="830" y="117" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
