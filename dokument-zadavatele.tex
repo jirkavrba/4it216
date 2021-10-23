@@ -273,4 +273,147 @@ Skládá se ze čtyř částí:
 
 \subsection*{Souhrnná analýza stavu IT}
 
+\subsubsection*{Strategické řízení IT}
+
+\begin{enumerate}
+    \item \textbf{Podporuje IS/IT dosažení podnikových cílů?} \\
+         Ano, firma provozuje e-shop, kde je možné si objednat květiny.
+         Následně se objednávky zpracovávají za účelem vylepšení kvality poskytovaných služeb.
+
+    \item \textbf{Je kvalita poskytovaných IT služeb dostatečná, nebo naopak nízká kvalita IT služeb ohrožuje kontinuitu a konkurenceschopnost byznysu?} \\
+        Kvalita poskytovaných IT služeb není dostatečná, bez investice do informačního systému,
+        který by propojil jednotlivé části společnosti není možné firmu dále škálovat a není možné
+        zefektivnit produkci objednávek.
+
+
+    \item \textbf{Existuje strategie podnikové informatiky?} \\
+        Strategie podnikové informatiky existuje, ale není přesně a konkrétně definovaná.
+        Celkovým cílem podnikové informatiky je zvýšení efektivity předávání informací mezi zaměstnanci.
+
+    \item \textbf{Jsou definovány principy IT Governance (zodpovědnosti za klíčová rozhodnutí)} \\
+        Nejsou definované přímo principy IT Governance, ale jsou definované zodpovědnosti za rozhodnutí jednotlivých pracovníků (např. při plánování docházky, dopravy nebo nákupu zboží na Holandské burze)
+
+
+\end{enumerate}
+
+\subsubsection*{Organizace vývoje a provozu IT}
+
+\begin{enumerate}
+    \item \textbf{Jsou nadefinovány a dodržovány IT procesy?} \\
+        IT procesy nejsou ve firmě definovány, vývoj systémů (primárně nových Excel tabulek) je řízen on-demand.
+
+    \item \textbf{Jsou IT procesy dobře měřeny?} \\
+        IT procesy měřeny nejsou, jediná relevantní metrika, o které jsou bedeny záznamy je doba vývoje nových částí, od kterých se odvíjí výplaty IT pracovníků.
+
+    \item \textbf{Vyhovuje organizace IT útvaru a rozdělení zodpovědností a pravomocí?} \\
+        Organizace IT útvaru je naprosto nedostačující pro dané potřeby firmy.
+
+    \item \textbf{Dodržují projekty plánovaný harmonogram?} \\
+        Vývoj projektů není vázán harmonogramem, nemohou ho tudíž dodržovat.
+\end{enumerate}
+
+\subsubsection*{Ekonomika současného IT}
+
+\begin{enumerate}
+    \item \textbf{Sledují se náklady na IT služby, IT procesy a IT zdroje dle potřebných hledisek?} \\
+        Náklady na IT služby jsou definovány pouze v rámci výplaty pracovníků IT oddělení.
+        Sledování procesů a IT zdrojů ve firmě úplně chybí.
+
+    \item \textbf{Jsou stanovovány a řízeny přínosy IS/IT?} \\
+        Přínosy IS/IT systémů nejsou nijak měřeny, protože neexistuje jednotný systém a přínosy Excel tabulek jsou těžko měřitelné.
+
+    \item \textbf{Dodržují se plánované rozpočty projektů?} \\
+    Ano, pokud je na projekt stanoven rozpočet, musí ho zaměstnanci dodržet.
+
+    \item \textbf{V čem jsou klíčové problémy ekonomické efektivnosti IS/IT?} \\
+        Největším problémem ekonomické efektivnosti systémů je, že se jedná o velice obecné řešení,
+        které není přizpůsobeno potřebám jednotlivých pracovníků a je tudíž nákladné dělat i minimální změny.
+\end{enumerate}
+
+\subsubsection*{Architektura IT služeb}
+\begin{enumerate}
+    \item \textbf{Je zdokumentovaná?} \\
+        Dokumentace je minimální a i malá zdokumentovaná část je z velké části neaktuální.
+
+    \item \textbf{Hodnocení kvality služeb (dostupnost, doba odezvy, škálovatelnost, cena...)} \\
+        Online e-shop je hostován na platformě webnode.cz a služba je spolehlivá, nicméně velice omezená co se týče vzhledu a funkcionality, je náročné dělat změny a není možné integrovat web do Excel tabulek, tudíž zaměstnanci musí zadávat data manuálně což je velký problém z pohledu škálovatelnosti.
+\end{enumerate}
+
+\subsubsection*{Aplikační architektura}
+\begin{enumerate}
+    \item \textbf{Je zdokumentovaná?}\\
+        Částečně, primární datová architekura vychází z Excel tabulek používaných pro skladovou evidenci.
+
+    \item \textbf{Existují duplicity, nekonzistence?} \\
+        Ano, každá tabulka obsahující propojená data může mít jiný systém číslování, databáze zákazníků obsahuje duplikovaná ID. Tím, že se nepoužívá např. DBMS neexistují v tabulkách integritní ani doménová omezení.
+
+        Existujíc duplicity, bohužel současný systém neumožňuje založit nového zákazníka a při tom kontrolovat existenci.
+
+    \item \textbf{Je kvalita dat (shoda s realitou) dostatečná?} \\
+        Pro základní práci a analýzy je dostatečná, je možné zjistit informace, které pracovník potřebuje, ale není možné zároveň efektivně popsat část domény se kterou zaměstnanec pracuje bez toho, aby vznikaly duplicity.
+
+    \item \textbf{Existují duplicitní funkce v různých aplikacích?} \\
+        Firma pro svojí IT činnost používá pouze jedinou aplikaci a to MS Excel.
+
+    \item \textbf{Jsou aplikace dobře integrovány?} \\
+        Vzhledem k tomu, že firma pro svojí IT činnost používá pouze jediný software, není potřeba zajišťovat integraci. Integrace s verzemi je zabudovaná přímo do MS Excel.
+\end{enumerate}
+
+\subsubsection*{Technologická architektura}
+\begin{enumerate}
+    \item \textbf{Je zdokumentovaná?} \\
+        Neexistuje dokument, který by obsahoval konkrétní technologickou architekturu podniku. Pokud si některý ze zaměstnanců není jistý jak se s konkrétní tabulkou pracuje, zeptá se pracovníka IT.
+
+    \item \textbf{Je výhodná pro všechny aplikace?} \\
+        Neexistuje jednotný model. Podnik má pouze technické zadání poskytnuté vývojářem spravující konkrétní tabulku.
+
+    \item \textbf{Je škálovatelná?} \\
+        Technologická architektura škálovatelná není, vývoj jednotlivých komponent probíhá nezávisle a je tudíž náročné a nákladné propojit novou část se zbytkem firemního IT.
+
+    \item \textbf{Odpovídá počet a doba výpadků jednotlivých komponent požadované dostupnosti IT služeb?} \\
+        Výpadky firemního systému jsou poměrně vzácné (MS Excel je vcelku stabilní program), ale často dochází k výpadkům na straně e-shopu, důvodem je využívání externí služby, která je následně upravená nedostatečně kvalifikovanými pracovníky což vede ke snížení stability celého řešení.
+\end{enumerate}
+
+\subsubsection*{Personální zajištění současného IT}
+\begin{enumerate}
+    \item \textbf{Odpovídá počet, kvalifikace a zkušenosti pracovníků vývoje a provozu IS/IT požadavkům na IT služby?} \\
+        Počet pracovníků je dostačující, ale není dostačující jejich kvalifikace, firmě by se určitě vyplatilo investovat více peněz do školení IT zaměstnanců.
+
+    \item \textbf{Je zajištěn kvalifikační rozvoj IT pracovníků?} \\
+        Při nástupu jsou pracovníci IT oddělení zaškolení jedním ze stávajících pracovníků, což stačí na to, aby vykonávali svoji práci, ale lepší školení a kvalifikační rozvoj by určitě celému oddělení prospělo.
+
+    \item \textbf{Není příliš vysoká fluktuace IT pracovníků?} \\
+        Pracovníci IT oddělení je jedna z nejvíce stabilních částí firmy z pohledu fluktuace zaměstanců. Největší fluktuace probíhá v oddělení floristů, kde je velké procento zaměstnanců tvořeno brigádníky a externisty.
+
+    \item \textbf{Funguje tvorba nástupnictví?} \\
+        IT ve firmě zajišťuje tým mladých a zdravých lidí, kteří nemají v plánu z firmy odejít.
+\end{enumerate}
+
+\subsubsection*{Externí dodavatelé produktů a IT služeb}
+\begin{enumerate}
+    \item \textbf{Je kvalita produktů a služeb IT dodavatelů shodná s našimi požadavky} \\
+        Ano, kvalita jediného externího produktu (MS Excel) odpovídá požadavkům.
+
+    \item \textbf{Jaká je spolehlivost a stabilita dodatavatelů?} \\
+        Dodavatel software (Microsoft) je jednou z největších firem světa a tedy i velice stabilní dodavatel.
+\end{enumerate}
+
+\subsubsection*{Bezpečnostní aspekty současného IT}
+\begin{enumerate}
+    \item \textbf{Jak jsou časté výpadky aplikací a komponent technologické infrastruktury? Ohrožují výpadky kontinuitu byznysu?} \\
+        Výpadky technologické infrastruktury nejsou časté, ale mohou nastat. Lidské chyby a lidská nespolehlivost -- faktory, které mohou způsobit výpadek nebo jiné technologické problémy. Výpadky samozřejmě mohou mít negativní vliv na kontinuitu podniku, ale nezpůsobí úplné zastavení. Jelikož zákazníci preferují nakupovat květiny na kamenné prodejně.
+
+    \item \textbf{Je dobře zajištěna identifikace uživatelů do našeho IS?} \\
+        Společnost má chaotickou evidenci objednávek. Proto identifikace uživatelů může být poměrně problematická. Často se objevují duplicitní hodnoty, někteří zákazníci mohou být vedeni i 2 - 3 záznamy.
+
+    \item \textbf{Vychází bezpečnostní polity pro IS/IT z podnikových bezpečnostních politik?} \\
+        Bezpečnostní politiky jsou definované pouze pro fyzický přístup do budovy, např. do skladu. Politika přístupů do např. administrace e-shopu je velice zanedbaná.
+
+    \item \textbf{Jak často je testovaná a ověřována bezpečnost?} \\
+        Bezpečnost není prakticky vůbec monitorovaná, e-shop funguje na staré, nezabezpečené verzi frameworku.
+
+    \item \textbf{Je systém dobře zajištěn proti neoprávněnému užití funkcí IS a zneužití dat?} \\
+        Není, v minulosti se stalo, že data unikla, ale problém zabezpečení nebyl nalezen a vyřešen. Přístup do administrace e-shopu je pod sdíleným účtem s plnými administrátorskými právy. V této oblasti se nabízí velké pole působnosti pro případná zlepšení.
+\end{enumerate}
+
 \end{document}
